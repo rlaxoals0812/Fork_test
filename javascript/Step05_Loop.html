@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_Loop.html</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>반복문 테스트</h1>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+        <p>p7</p>
+        <p>p8</p>
+        <p>p9</p>
+        <p>p10</p>
+        <button id="changeBtn">change</button>
+        <button id="changeBtn2">change2</button>
+        <button id="changeBtn3">change3</button>
+    </div>
+    <script>
+        document.querySelector("#changeBtn").addEventListener('mousedown',()=>{
+            const ps = document.querySelectorAll("p");
+
+            for(let i=0; i<ps.length;i++){
+                let tmp = ps[i];
+                tmp.style.color = "red";    
+            }
+        });
+        document.querySelector("#changeBtn").addEventListener('mouseup',()=>{
+            const ps = document.querySelectorAll("p");
+
+            for(let i=0; i<ps.length;i++){
+                let tmp = ps[i];
+                tmp.style.color = "blue";    
+            }
+        });
+        document.querySelector("#changeBtn2").addEventListener('click',()=>{
+            const ps = document.querySelectorAll("p");
+
+            for(const tmp of ps){
+                tmp.style.backgroundColor='yellow';
+            }
+        });
+        document.querySelector("#changeBtn3").addEventListener('click',()=>{
+            const ps = document.querySelectorAll("p");
+
+            ps.forEach((item)=>{
+                item.style.fontSize='30px';
+            });
+        });
+    </script>
+</body>
+</html>
