@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_loop03.html</title>
+</head>
+<body>
+    <div class="container">
+        <h1>while test</h1>
+        <button id="startBtn">반복1</button>
+        <br>
+        <button id="startBtn2">반복2</button>
+        <br>
+        <button id="startBtn3">반복3</button>
+    </div>
+    <script>
+        document.querySelector('#startBtn').addEventListener('click',()=>{
+            let count = 0;
+            while(true){
+                console.log(count);
+                count++;
+                if(count==10){
+                    break;
+                }
+            }
+        });
+        document.querySelector('#startBtn2').addEventListener('click',()=>{
+            let count = 0;
+            while(count<10){
+                console.log(count);
+                count++;
+                if(false){
+                    break;
+                }
+            }
+        });
+        document.querySelector('#startBtn3').addEventListener('click',()=>{
+            for(let i=0;i<10;i++){
+                console.log(i);
+            }
+        });
+    </script>
+</body>
+</html>
